@@ -1,0 +1,3 @@
+---
+# defaults file for roles/ansible-role-icecast-master
+repo_icecast: "epel"

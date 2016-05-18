@@ -1,0 +1,5 @@
+---
+- name: Modify icecast file configuration
+  template: src=icecast.xml.j2 dest=/etc/icecast.xml mode=0660
+  when: icecast.changed
+  notify: reload icecast

@@ -1,0 +1,7 @@
+---
+# handlers file for roles/ansible-role-icecast-master
+- name: restart icecast
+  service: name={{service_icecast}} state=restarted enabled=yes
+
+- name: reload icecast
+  service: name={{service_icecast}} state=reloaded enabled=yes

@@ -1,0 +1,11 @@
+---
+# tasks file for roles/ansible-role-icecast-master
+- name: include vars for centos
+  include_vars: RedHat.yml
+  when: ansible_os_family=="RedHat"
+
+- include: install_icecast_centos.yml
+  when: ansible_os_family=="RedHat"
+
+- include: configuration_icecast_centos.yml
+  when: ansible_os_family=="RedHat"

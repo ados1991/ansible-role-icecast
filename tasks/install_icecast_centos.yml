@@ -1,0 +1,5 @@
+---
+- name: install icecast on centos
+  yum: name=icecast state=present enablerepo={{repo_icecast}}
+  notify: restart icecast
+  register: icecast
